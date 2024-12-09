@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Linux Commands Guide for DevOps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+            white-space: pre-wrap;
+        }
+        .command-box {
+            margin-bottom: 20px;
+        }
+        button.copy-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button.copy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Comprehensive Linux Commands Guide for DevOps Engineers</h1>
+<p>This guide includes essential Linux commands for DevOps engineers, with examples and separate copy buttons for commands and examples.</p>
+
+<h2>1. File and Directory Management</h2>
+
+<div class="command-box">
+<h3>1.1 `pwd` - Print Current Directory</h3>
+<pre>
+Command:
+pwd
+<button class="copy-btn" onclick="copyToClipboard('pwd')">Copy Command</button>
+</pre>
+<pre>
+Example:
+pwd
+# Output: /home/user
+<button class="copy-btn" onclick="copyToClipboard('pwd example')">Copy Example</button>
+</pre>
+</div>
+
+<div class="command-box">
+<h3>1.2 `ls` - List Directory Contents</h3>
+<pre>
+Command:
+ls -l
+<button class="copy-btn" onclick="copyToClipboard('ls -l')">Copy Command</button>
+</pre>
+<pre>
+Example:
+ls -l
+# Output: Detailed list of files and directories.
+<button class="copy-btn" onclick="copyToClipboard('ls -l example')">Copy Example</button>
+</pre>
+</div>
+
+<div class="command-box">
+<h3>1.3 `mkdir` - Create Directory</h3>
+<pre>
+Command:
+mkdir new_folder
+<button class="copy-btn" onclick="copyToClipboard('mkdir new_folder')">Copy Command</button>
+</pre>
+<pre>
+Example:
+mkdir new_folder
+# Creates a directory named new_folder.
+<button class="copy-btn" onclick="copyToClipboard('mkdir new_folder example')">Copy Example</button>
+</pre>
+</div>
+
+<h2>2. User and Group Management</h2>
+
+<div class="command-box">
+<h3>2.1 `adduser` - Add New User</h3>
+<pre>
+Command:
+sudo adduser username
+<button class="copy-btn" onclick="copyToClipboard('sudo adduser username')">Copy Command</button>
+</pre>
+<pre>
+Example:
+sudo adduser devops_user
+# Adds a new user named devops_user.
+<button class="copy-btn" onclick="copyToClipboard('adduser example')">Copy Example</button>
+</pre>
+</div>
+
+<div class="command-box">
+<h3>2.2 `usermod` - Modify User</h3>
+<pre>
+Command:
+sudo usermod -aG groupname username
+<button class="copy-btn" onclick="copyToClipboard('sudo usermod -aG groupname username')">Copy Command</button>
+</pre>
+<pre>
+Example:
+sudo usermod -aG sudo devops_user
+# Adds the user devops_user to the sudo group.
+<button class="copy-btn" onclick="copyToClipboard('usermod example')">Copy Example</button>
+</pre>
+</div>
+
+<h2>3. Process Management</h2>
+
+<div class="command-box">
+<h3>3.1 `ps` - Show Running Processes</h3>
+<pre>
+Command:
+ps aux
+<button class="copy-btn" onclick="copyToClipboard('ps aux')">Copy Command</button>
+</pre>
+<pre>
+Example:
+ps aux | grep nginx
+# Lists all running processes and filters for nginx.
+<button class="copy-btn" onclick="copyToClipboard('ps example')">Copy Example</button>
+</pre>
+</div>
+
+<div class="command-box">
+<h3>3.2 `kill` - Terminate Process</h3>
+<pre>
+Command:
+kill -9 PID
+<button class="copy-btn" onclick="copyToClipboard('kill -9 PID')">Copy Command</button>
+</pre>
+<pre>
+Example:
+kill -9 12345
+# Terminates the process with PID 12345.
+<button class="copy-btn" onclick="copyToClipboard('kill example')">Copy Example</button>
+</pre>
+</div>
+
+<h2>4. Networking</h2>
+
+<div class="command-box">
+<h3>4.1 `ping` - Test Connectivity</h3>
+<pre>
+Command:
+ping google.com
+<button class="copy-btn" onclick="copyToClipboard('ping google.com')">Copy Command</button>
+</pre>
+<pre>
+Example:
+ping -c 4 google.com
+# Sends 4 ICMP packets to google.com.
+<button class="copy-btn" onclick="copyToClipboard('ping example')">Copy Example</button>
+</pre>
+</div>
+
+<div class="command-box">
+<h3>4.2 `scp` - Secure File Copy</h3>
+<pre>
+Command:
+scp file.txt user@remote_host:/path/to/destination
+<button class="copy-btn" onclick="copyToClipboard('scp file.txt user@remote_host:/path/to/destination')">Copy Command</button>
+</pre>
+<pre>
+Example:
+scp backup.tar.gz devops@192.168.1.100:/home/devops/backups/
+# Copies backup.tar.gz to the backups directory of the remote server.
+<button class="copy-btn" onclick="copyToClipboard('scp example')">Copy Example</button>
+</pre>
+</div>
+
+<script>
+function copyToClipboard(content) {
+    navigator.clipboard.writeText(content).then(() => {
+        alert("Copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
+</script>
+
+</body>
+</html>
